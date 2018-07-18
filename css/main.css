@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-.container, .homepage {
+.container, .singlepage, .doublepage {
   line-height: 1.6;
   padding-left: 1em;
   padding-right: 1em;
@@ -90,94 +90,13 @@ img {
   margin: 15px 0;
 }
 
-/*  Cart modal */
-
-.modal {
-  display: none;
-  height: auto;
-  width: 90%;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  overflow: auto;
-  border: 3px solid #000;
-  background-color: rgb(0,0,0);
-  background-color: rgba(255, 255,255,1);
-}
-
-.modal-content {
-  background color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.modal_content h3 {
-  font-size: 1.5em;
-  font-weight: bold;
-  padding-left: 15px
-}
-
-.modal_content li {
-  display: flex;
-  text-decoration: none;
-  justify-content: space-around;
-  margin-bottom: .75em;
-}
-
-.modal_cost {
-  margin-left: auto;
-  padding-right: 10px;
-}
-
-.modal_order {
-  margin-right: auto;
-  padding-left: 15px
-}
-
-.modal_content button {
-  margin-left: 15px;
-}
 
 
-/*    Contact     */
-
-.contact li {
-  list-style-type: none;
-}
-
-.contact-image {
-  width: 90%;
-  height: auto;
-}
-
-.map {
-  margin: auto;
-  width: 90%;
-  height: auto;
-}
 
 /*    Footer     */
 
 footer {
-  background-color: indigo;
+  background-color: purple;
   color: #fff;
   text-align: center;
   padding-top: 1em;
@@ -185,10 +104,33 @@ footer {
   margin-top: 1em;
 }
 
+.footer-nav {
+  font-family: Alegreya, sans-serif;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.footer-nav li {
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+.footer-nav a {
+  background-color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: none;
+  color: indigo;
+
+}
+
+.footer-nav a:hover {
+  color: gold;
+
 /* Media Queries */
 
 @media (min-width: 769px) {
-  .container, .homepage {
+  .container, .singlepage, .doublepage {
     width: 70%;
     max-width: 1000px;
     margin: auto;
@@ -219,15 +161,11 @@ footer {
   .wrap {
     min-height: calc(100vh - 82px);
   }
-
-  .modal {
-    width: 65%;
-  }
 }
 
 @media (min-width: 960px) {
 
-  .homepage {
+  .doublepage {
     display: flex;
     margin: 50px;
     width: 80%;
@@ -235,21 +173,25 @@ footer {
 
   .column {
     display: inline-block;
-    width: 50%;
+    width: 100%;
     vertical-align: top;
     padding-left: 1em;
     padding-right: 1em;
   }
 
-  .about {
+  .double_A {
     margin-right: 50px;
   }
 
-  .sponsor {
+  .double_B {
     margin-left: 50px;
   }
 
-  .modal {
-    width: 50%;
+  .single {
+    margin-left: 50px;
+    margin-right:50px;
   }
+
+
+
 }
